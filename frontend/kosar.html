@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../frontend/img/logo.png">
+  <title>Kosár</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./node_modules\bootstrap\dist\css\bootstrap.min.css">
+
+  <link rel="stylesheet" href="./css/uj.css">
+
+ 
+  <script src="./js/main.js"></script>
+ 
+  <script src="./node_modules\bootstrap\dist\js\bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="load()">
+
+  <style>
+       body {
+        background-image: url('../frontend/img/hambi.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        
+      }
+  </style>
+  <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+      <div class="container-fluid">
+          <img src="../frontend/img/home.png" class="btn" alt="Főoldal" type="buttom" style=" width:55px; height: 50px; color: black;" onclick="nextpage1()">
+          
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                  <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="javascript:void(0)" onclick="nextpage()">Rólunk</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="javascript:void(0)" onclick="nextpage2()">Burgereink</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="javascript:void(0)" onclick="nextpage3()">Kosár</a>
+                    </li>
+                  </ul>
+              <img src="../frontend/img/logo.png" alt="Kong Burger" style="width:50px;height:50px;">
+
+              <img src="../frontend/img/user.png" class="icon" alt="Főoldal" type="buttom" style=" width:35px; height: 30px; color: black;">
+  <button type="button" style="color: white; float: right;"  class="btn" id="loggedInUser"></button>
+  <button type="button" class="btn btn-danger" onclick="logout()">Kijelentkezés</button>
+      </div>
+  </nav>
+  <section class="container content-section">
+    <h2 class="section-header" style="color:white">Válasszon terméket:</h2>
+    <div class="shop-items">
+        <div class="shop-item">
+            <span class="shop-item-title" style="color: white;">Csibe Burger</span>
+            <img class="shop-item-image" src="../frontend/img/csirke.png">
+            <div class="shop-item-details">
+                <span class="shop-item-price"style="color:white">1790 Ft</span>
+                <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title"style="color: white;">Big Kong</span>
+            <img class="shop-item-image" src="../frontend/img/big mac.png">
+            <div class="shop-item-details">
+                <span class="shop-item-price"style="color:white">2190 Ft</span>
+                <button class="btn btn-warning shop-item-button"type="button">Kosárba</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title"style="color: white;">Sajtburger</span>
+            <img class="shop-item-image" src="../frontend/img/sajtb.png">
+            <div class="shop-item-details">
+                <span class="shop-item-price"style="color:white">900 Ft</span>
+                <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <span class="shop-item-title"style="color: white;">Dupla Kong</span>
+            <img class="shop-item-image" src="../frontend/img/duplakong.png">
+            <div class="shop-item-details">
+                <span class="shop-item-price"style="color:white">3920 Ft</span>
+                <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+            </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title"style="color: white;">Spicy Burger</span>
+          <img class="shop-item-image" src="../frontend/img/spicy.png">
+          <div class="shop-item-details">
+              <span class="shop-item-price"style="color:white">2960 Ft</span>
+              <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+          </div>
+      </div>
+      <div class="shop-item">
+        <span class="shop-item-title"style="color: white;">Honey Kong</span>
+        <img class="shop-item-image" src="../frontend/img/honey.png">
+        <div class="shop-item-details">
+            <span class="shop-item-price"style="color:white">3765 Ft</span>
+            <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+        </div>
+    </div>
+    <div class="shop-item">
+      <span class="shop-item-title"style="color: white;">Kong Farm</span>
+      <img class="shop-item-image" src="../frontend/img/kfarm.png">
+      <div class="shop-item-details">
+          <span class="shop-item-price"style="color:white">4452 Ft</span>
+          <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+      </div>
+  </div>
+  <div class="shop-item">
+    <span class="shop-item-title"style="color: white;">Halas Burger</span>
+    <img class="shop-item-image" src="../frontend/img/fish.png">
+    <div class="shop-item-details">
+        <span class="shop-item-price"style="color:white">2390 Ft</span>
+        <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+    </div>
+</div>
+<div class="shop-item">
+  <span class="shop-item-title"style="color: white;">Dupla Sajt</span>
+  <img class="shop-item-image" src="../frontend/img/duplasajt.png">
+  <div class="shop-item-details">
+      <span class="shop-item-price"style="color:white">3190 Ft</span>
+      <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+  </div>
+</div>
+<div class="shop-item">
+  <span class="shop-item-title"style="color: white;">Pinky Burger</span>
+  <img class="shop-item-image" src="../frontend/img/pinky.png">
+  <div class="shop-item-details">
+      <span class="shop-item-price"style="color:white">1960 Ft</span>
+      <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+  </div>
+</div>
+<div class="shop-item">
+  <span class="shop-item-title"style="color: white;">Glutén-Off</span>
+  <img class="shop-item-image" src="../frontend/img/gluten.png">
+  <div class="shop-item-details">
+      <span class="shop-item-price"style="color:white">3920 Ft</span>
+      <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+  </div>
+</div>
+<div class="shop-item">
+  <span class="shop-item-title"style="color: white;">Hamburger</span>
+  <img class="shop-item-image" src="../frontend/img/hamburger.png">
+  <div class="shop-item-details">
+      <span class="shop-item-price"style="color:white">1190 Ft</span>
+      <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+  </div>
+</div>
+<div class="shop-item">
+  <span class="shop-item-title"style="color: white;">Tojás Burger</span>
+  <img class="shop-item-image" src="../frontend/img/tojas.png">
+  <div class="shop-item-details">
+      <span class="shop-item-price"style="color:white">990 Ft</span>
+      <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+  </div>
+</div>
+<div class="shop-item">
+  <span class="shop-item-title"style="color: white;">Muffin</span>
+  <img class="shop-item-image" src="../frontend/img/guacamole.png">
+  <div class="shop-item-details">
+      <span class="shop-item-price" style="color:white">4890 Ft</span>
+      <button class="btn btn-warning shop-item-button" type="button">Kosárba</button>
+  </div>
+</div>
+    </div>
+</section>
+
+<section class="container content-section">
+    <h2 class="section-header" style="color: white;">Kosár</h2>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column"style="color: white;">Termék</span>
+        <span class="cart-price cart-header cart-column"style="color: white;">Ár</span>
+        <span class="cart-quantity cart-header cart-column"style="color: white;">Mennyiség</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title"style="color: white;">Végösszeg</strong>
+        <span class="cart-total-price"style="color: white;">0Ft</span>
+    </div>
+    <button class="btn btn-warning btn-purchase" type="button" >Vásárlás</button>
+</section>
+
+
+
+
+</body>
+
+</html>

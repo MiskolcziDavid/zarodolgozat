@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../frontend/img/logo.png">
+  <title>Burgereink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./node_modules\bootstrap\dist\css\bootstrap.min.css">
+  <script src="./js/main.js"></script>
+  <script src="./node_modules\bootstrap\dist\js\bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="load()">
+
+  <style>
+       body {
+        background-image: url('../frontend/img/hambi.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        
+      }
+  </style>
+  <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+      <div class="container-fluid">
+          <img src="../frontend/img/home.png" class="btn" alt="Főoldal" type="buttom" style=" width:55px; height: 50px; color: black;" onclick="nextpage1()">
+          
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                  <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="javascript:void(0)" onclick="nextpage()">Rólunk</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="javascript:void(0)" onclick="nextpage2()">Burgereink</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: black;" href="javascript:void(0)" onclick="nextpage3()">Kosár</a>
+                    </li>
+                  </ul>
+
+              <img src="../frontend/img/logo.png" alt="Kong Burger" style="width:50px;height:50px;">
+
+              <img src="../frontend/img/user.png" class="icon" alt="Főoldal" type="buttom" style=" width:35px; height: 30px; color: black;">
+  <button type="button" style="color: white; float: right;"  class="btn" id="loggedInUser"></button>
+  <button type="button" class="btn btn-danger" onclick="logout()">Kijelentkezés</button>
+      </div>
+  </nav>
+  <style>
+   
+    .column {
+float: left;
+width: 13.80%;
+padding: 5px;
+
+      display:grid;
+      
+color: white;
+
+} 
+
+  </style>
+  <div style="padding-left: 3%;"class="container-fluid">
+  <div class="row">
+    <div class="column">
+    <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);
+    ">                       
+        <img class="card-img-top" src="../frontend/img/csirke.png" alt="Csibe Burger">
+        <div class="card-body">
+          <h4 class="card-title">Csibe Burger</h4>
+          <p class="card-text">1790 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage4()">Leírás</a>
+        </div>
+      </div>
+    </div>
+      <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/big mac.png" alt="Big Kong">
+        <div class="card-body">
+          <h4 class="card-title">Big Kong</h4>
+          <p class="card-text">2190 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage5()">Leírás</a>
+        </div>
+      </div>
+    </div>
+      <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/sajtb.png" alt="Sajtburger">
+        <div class="card-body">
+          <h4 class="card-title">Sajtburger</h4>
+          <p class="card-text">900 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage6()">Leírás</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/duplakong.png" alt="Dupla Kong">
+        <div class="card-body">
+          <h4 class="card-title">Dupla Kong</h4>
+          <p class="card-text">3920 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage7()">Leírás</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/spicy.png" alt="Spicy Burger">
+        <div class="card-body">
+          <h4 class="card-title">Spicy Burger</h4>
+          <p class="card-text">2960 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage8()">Leírás</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/honey.png" alt="Honey Kong">
+        <div class="card-body">
+          <h4 class="card-title">Honey Kong</h4>
+          <p class="card-text">3765 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage9()">Leírás</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/kfarm.png" alt="Kong Farm">
+        <div class="card-body">
+          <h4 class="card-title">Kong Farm</h4>
+          <p class="card-text">4452 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage10()">Leírás</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+    <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/fish.png" alt="Halas Burger">
+        <div class="card-body">
+          <h4 class="card-title">Halas Burger</h4>
+          <p class="card-text">2390 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage11()">Leírás</a>
+        </div>
+      </div>
+    </div>
+      <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/duplasajt.png" alt="Dupla Sajt">
+        <div class="card-body">
+          <h4 class="card-title">Dupla Sajt</h4>
+          <p class="card-text">3190 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage12()">Leírás</a>
+        </div>
+      </div>
+    </div>
+      <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/pinky.png" alt="Pinky Burger">
+        <div class="card-body">
+          <h4 class="card-title">Pinky Burger</h4>
+          <p class="card-text">1960 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage13()">Leírás</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/gluten.png" alt="Glutén-Off">
+        <div class="card-body">
+          <h4 class="card-title">Glutén-Off</h4>
+          <p class="card-text">3920 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage14()">Leírás</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/hamburger.png" alt="Hamburger">
+        <div class="card-body">
+          <h4 class="card-title">Hamburger</h4>
+          <p class="card-text">1190 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage15()">Leírás</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/tojas.png" alt="Tojás Burger">
+        <div class="card-body">
+          <h4 class="card-title">Tojás Burger</h4>
+          <p class="card-text">990 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage16()">Leírás</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card mt-3" style="width:180px;background-color: transparent;background-color: rgba(128, 128, 128, 0.521);">                       
+        <img class="card-img-top" src="../frontend/img/guacamole.png" alt="Muffin">
+        <div class="card-body">
+          <h4 class="card-title">Muffin</h4>
+          <p class="card-text">4890 Ft</p>
+          <a href="#" class="btn btn-primary" onclick="nextpage17()">Leírás</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h1 style="color:white;text-align: center;">FIGYELEM! A rendelést a kosár fülön keresztül adhatja le.</h1>
+     
+ 
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../frontend/img/logo.png">
+  <title>Dupla Sajt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./node_modules\bootstrap\dist\css\bootstrap.min.css">
+  <script src="./js/main.js"></script>
+  <script src="./node_modules\bootstrap\dist\js\bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="load()">
+
+  <style>
+       body {
+        background-image: url('../frontend/img/fekete.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        
+      }
+  </style>
+  <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+      <div class="container-fluid">
+          <img src="../frontend/img/home.png" class="btn" alt="Főoldal" type="buttom" style=" width:55px; height: 50px; color: black;" onclick="nextpage1()">
+          
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                  <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="javascript:void(0)" onclick="nextpage()">Rólunk</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="javascript:void(0)" onclick="nextpage2()">Burgereink</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="javascript:void(0)" onclick="nextpage3()">Kosár</a>
+                    </li>
+                  </ul>
+
+              <img src="../frontend/img/logo.png" alt="Kong Burger" style="width:50px;height:50px;">
+
+              <img src="../frontend/img/user.png" class="icon" alt="Főoldal" type="buttom" style=" width:35px; height: 30px; color: black;">
+  <button type="button" style="color: white; float: right;"  class="btn" id="loggedInUser"></button>
+  <button type="button" class="btn btn-danger" onclick="logout()">Kijelentkezés</button>
+      </div>
+  </nav>
+<style>
+  .column {
+    float: left;
+    width: 13.80%;
+    padding: 5px;
+    
+            display:grid;
+            
+    color: white;
+    
+  } 
+  
+  </style>
+  <h1 style="color: white; margin-left: 10px">Dupla Sajt</h1>
+  <p style="color: white; margin-left: 10px;">Dupla sajt burger az igazi sajt óriás!</p>
+  <p style="color: white; margin-left: 10px;"> Összetevők:</p>
+  <li style="color: white;margin-left: 10px;">Dupla hús korong</li>
+  <img src="../frontend/img/duplasajt.png" alt="Dupla Sajt" style="float: right;">
+  <li style="color: white;margin-left: 10px;">Hamburger Buci</li>
+  <li style="color: white;margin-left: 10px;">Dupla sajt</li>
+  <li style="color: white;margin-left: 10px;">Uborka</li>
+  <li style="color: white;margin-left: 10px;">Hagyma</li>
+  <li style="color: white;margin-left: 10px;">Ketchup</li>
+  <p style="color: white;margin-left:  10px;">A dupla sajt burgerünk a klasszikus sajtburger óriási testvére mely dupla sajttal és dupla hús koronggal lett el látva! Kóstolja meg ön is! </p>
+  <br>
+  <br>
+  
+  
+</body>
+
+</html>
