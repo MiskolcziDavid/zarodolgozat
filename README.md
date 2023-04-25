@@ -11,3 +11,7 @@ Használat:
 1. Backend indítása: node app.js
 2. Frontend indítása: index.html-t nyissuk meg egy böngészőben.
 3. XAMPP indítása az adatbázis eléréséhez.
+
+Felhasználók és jelszavaik:
+admin - 123
+ddave - 123
